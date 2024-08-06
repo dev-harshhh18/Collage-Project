@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Marks Calculator</h1>
+        <form id="marksForm">
+            <label for="rollNumber">Roll Number:</label>
+            <input type="text" id="rollNumber" name="rollNumber" required>
+        
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="pMarks">Physics Marks:</label>
+            <input type="number" id="pMarks" name="pMarks" required>
+        
+            <label for="mMarks">Mathematics Marks:</label>
+            <input type="number" id="mMarks" name="mMarks" required>
+        
+            <label for="cMarks">Chemistry Marks:</label>
+            <input type="number" id="cMarks" name="cMarks" required>
+        
+            <label for="sm1">Cricket Marks:</label>
+            <input type="number" id="sm1" name="sm1" required>
+        
+            <label for="sm2">Hockey Marks:</label>
+            <input type="number" id="sm2" name="sm2" required>
+        
+            <label for="sm3">Chess Marks:</label>
+            <input type="number" id="sm3" name="sm3" required>
+        
+            <button type="button" onclick="submitForm()">Calculate Result</button>
+            <button type="reset">Reset</button>
+        </form>        
+        <div id="result"></div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
